@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Visit link to see the deplayed site](https://pro-grammer206.github.io/news-homepage/)
+- Solution URL: [Visit link to see the deployed site](https://pro-grammer206.github.io/news-homepage/)
 
 
 
