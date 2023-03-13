@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | News homepage</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <img src="./assets/images/logo.svg" alt="logo">
+      <section class="linkbar">
+        <a href="#">Home</a>
+        <a href="#">New</a>
+        <a href="#">Popular</a>
+        <a href="#">Trending</a>
+        <a href="#">Categories</a>
+      </section>
+      <section class="toggleBar">
+        <img src="./assets/images/icon-menu.svg" alt="">
+      </section>
+      <section class="menu--mobile">
+        <img src="./assets/images/icon-menu-close.svg" alt="" id="close">
+        <a href="#">Home</a>
+        <a href="#">New</a>
+        <a href="#">Popular</a>
+        <a href="#">Trending</a>
+        <a href="#">Categories</a>
+      </section>
+    </nav>
+  </header>
+  <main>
+    <section class="topContent">
+      <section class="starredarticle">
+        <img src="./assets/images/image-web-3-desktop.jpg" alt="web3"  class="starredarticle__img">
+        <section class="articleContent">
+          <h3>The Bright Future of Web 3.0?</h3>
+          <section class="starredarticle__content">
+            <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fullfilling its promise?</p>
+            <button class="btn">READ MORE</button>
+          </section>
+        </section>
+      </section>
+        <section class="newArticles">
+          <h2 class="newArticles__heading">New</h2>
+          <section class="abridgedArticles">
+            <a href="#" class="abridgedArticles__link">Hydrogen Vs Electric Cars</a>
+            <p class="abridgedArticles__content">Will hydrogen fueled cars even catch up with EV?</p>
+            <hr>
+          </section>
+          <section class="abridgedArticles">
+            <a href="#" class="abridgedArticles__link">The Downsides of AI Artistry</a>
+            <p class="abridgedArticles__content">What are the possible adverse effects of on-demand AI image generation?</p>
+            <hr>
+          </section>
+          <section class="abridgedArticles">
+            <a href="#" class="abridgedArticles__link">Is VC Funding Drying Up?</a>
+            <p class="abridgedArticles__content">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+
+          </section>
+        </section>
+    </section>
+    <section class="bottomContent">
+    <section class="otherArticles">
+      <article class="subArticles">
+        <img src="./assets/images/image-retro-pcs.jpg" alt="">
+        <div class="subArticles__content">
+          <h3>01</h3>
+          <a href="#" class="subArticle__link">Reviving Retro PCs</a>
+          <p>What happens when old PCs are given modern upgrades?</p>
+        </div>
+      </article>
+      <article class="subArticles">
+        <img src="./assets/images/image-top-laptops.jpg" alt="">
+        <div class="subArticles__content">
+          <h3>02</h3>
+          <a href="#" class="subArticle__link">Top 10 Laptops of 2022</a>
+          <p>Our best picks for various needs and budgets</p>
+        </div>
+      </article>
+      <article class="subArticles">
+        <img src="./assets/images/image-gaming-growth.jpg" alt="">
+        <div class="subArticles__content">
+          <h3>03</h3>
+          <a  href="#" class="subArticle__link">The Growth of Gaming</a>
+          <p>How the pandemic has sparked fresh opportunities</p>
+        </div>
+      </article>
+
+    </section>
+    </section>
+
+  </main>
+
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">pro-grammer206</a>.
+  </footer>
+  <script>
+    const linkbar = document.querySelector('.linkbar')
+    const toggleBar = document.querySelector('.toggleBar')
+    const menu = document.querySelector('.menu--mobile')
+
+    const removeMenu = ()=>{
+      menu.style.display='none'
+    }
+    
+    toggleBar.onclick = ()=>{
+      const linkbar = document.querySelector('.linkbar')
+      menu.style.display='flex'
+      if(linkbar)
+      linkbar.style.display='none'
+    }
+    window.addEventListener('resize',function(e) {
+  
+      if(window.innerWidth<1000){
+      const close = document.querySelector('#close')
+      linkbar.style.display = 'none'
+      toggleBar.style.display='block'
+      if(close){
+        close.addEventListener('click',removeMenu)
+
+      }
+      
+    }else{
+      linkbar.style.display = 'flex'
+      toggleBar.style.display='none'
+    }
+    })
+  </script>
+</body>
+</html>
